@@ -11,6 +11,7 @@ mongoose.connect(process.env.DB)
 import cors from 'cors'
 import express from "express"
 import SchoolRouter from './router/school.router.js'
+import SubjectRouter from './router/subject.router.js'
 
 
 const app = express()
@@ -21,3 +22,4 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use("/school", SchoolRouter)
+app.use("/subject", SubjectRouter)
